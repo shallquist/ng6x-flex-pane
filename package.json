@@ -6,8 +6,9 @@
     "start": "ng serve",
     "build": "ng build",
     "build_lib": "ng build flex-pane-lib",
+    "cp-readme": "cp README.md dist/flex-pane-lib/",
     "npm_pack": "cd dist/flex-pane-lib && npm pack",
-    "package": "npm run build_lib && npm run npm_pack",
+    "package": "npm run build_lib && npm run cp-readme && npm run npm_pack ",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
