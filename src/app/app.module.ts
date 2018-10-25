@@ -1,6 +1,10 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
+import { MatCardModule } from '@angular/material';
+import { FlexLayoutModule } from '@angular/flex-layout';
+
+import { FlexPaneLibModule } from 'flex-pane-lib';
 import { AppComponent } from './app.component';
 
 @NgModule({
@@ -8,7 +12,10 @@ import { AppComponent } from './app.component';
     AppComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    MatCardModule,
+    FlexLayoutModule,
+    FlexPaneLibModule
   ],
   providers: [],
   bootstrap: [AppComponent]
