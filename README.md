@@ -19,7 +19,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
             Left Panel
           </mat-card-title>
         </mat-card>
-        <div ortHandle style="display: flex; align-items: center; justify-content: center;">
+        <div ortHandle fxLayoutAlign="center center">
           <button style="border:none; outline:none;">||</button>
         </div>      
       </ng-container>
@@ -34,7 +34,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
     <!-- bottom Panel -->
     <ng-container ortFlexPane="column">
-      <div ortHandle style="display: flex; align-items: center; justify-content: center;">
+      <div ortHandle fxLayoutAlign="center center">
         <button style="border:none; outline:none;"><div style="transform:rotate(90deg)">||</div></button>
       </div>      
     
@@ -45,5 +45,5 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
       </mat-card>  
     </ng-container>
   </div>
- </div>
+</div>
 ```
