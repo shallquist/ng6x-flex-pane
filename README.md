@@ -1,7 +1,7 @@
 # FlexPane
 Is a set of Angular directives when used with [@angular/flex-layout](https://github.com/angular/flex-layout) allows the user to resize view components dynamically.  This work was inspired by an [issue](https://github.com/angular/flex-layout/issues/266) raised by [Austin](https://github.com/amcdnl).
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.2.2.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.2.1.
 
 ## Installation
 `npm i ng6x-flex-pane`
