@@ -1,10 +1,10 @@
 import { Directive, ElementRef, Optional, Self } from '@angular/core';
-import { FlexDirective } from '@angular/flex-layout';
+import { DefaultFlexDirective } from '@angular/flex-layout';
 
 
 @Directive({
   selector: '[ortArea]'
 })
 export class FlexAreaDirective {
-  constructor(@Optional() @Self() public flex: FlexDirective, public elementRef: ElementRef) { }
+  constructor(@Optional() @Self() public flex: DefaultFlexDirective, public elementRef: ElementRef) { }
 }

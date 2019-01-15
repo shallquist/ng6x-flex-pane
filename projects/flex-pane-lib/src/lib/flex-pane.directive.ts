@@ -24,11 +24,6 @@ export class FlexPaneDirective {
 
     const newValue = initValue + delta;
 
-    const flex = this.area.flex as any;
-
-    console.log(`init:${initValue} delt:${delta} new:${newValue} flex:${flex}`)
-
-    flex._inputMap.flex = `${newValue}px`;
-    flex._updateStyle();
+    this.area.flex.activatedValue = `${newValue}px`;
   }
 }
