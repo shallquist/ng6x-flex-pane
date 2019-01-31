@@ -18,11 +18,15 @@ export class FlexPaneDirective {
   }
 
   onDrag({ x, y }): void {
+    let handleRef = this.handle.elementRef.nativeElement;
     let elRef = this.area.elementRef.nativeElement;
-    const initValue = this.direction === 'row' ? elRef.clientWidth : elRef.clientHeight;
-    const delta     = this.direction === 'row' ? x : -y;
+    let isRow = this.direction === 'row';
 
-    const newValue = initValue + delta;
+    const maxValue  = isRow ? window.innerWidth - handleRef.offsetWidth - 10 : window.innerHeight - handleRef.offsetHeight - 10;
+    const initValue = isRow ? elRef.clientWidth : elRef.clientHeight;
+    const delta     = isRow ? x : -y;
+
+    const newValue = Math.min(initValue + delta, maxValue);
 
     this.area.flex.activatedValue = `${newValue}px`;
   }

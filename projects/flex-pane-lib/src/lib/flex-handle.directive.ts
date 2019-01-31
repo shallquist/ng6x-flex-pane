@@ -8,8 +8,8 @@ import { takeUntil, map, switchMapTo } from 'rxjs/operators'
 export class FlexHandleDirective {
   @Output() drag: Observable<{ x: number, y: number }>;
 
-  constructor(ref: ElementRef) {
-    this.drag = fromEvent(ref.nativeElement, 'mousedown').pipe(
+  constructor(public elementRef: ElementRef) {
+    this.drag = fromEvent(elementRef.nativeElement, 'mousedown').pipe(
       // tap(_ => console.log("mouse down")),
       switchMapTo(
         fromEvent(document, 'mousemove').pipe(
